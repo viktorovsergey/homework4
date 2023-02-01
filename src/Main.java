@@ -1,15 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-            task1();
-            task2();
-            task3();
-            task4();
-            task5();
-            task6();
-            task7();
-            task8();
+        task1();
+        task2();
+        task3();
+        task4();
+        task5();
+        task6();
+        task7();
+        task8();
 
-}
+    }
 
     public static void task1() {
         /* Объявите переменные типа int, byte, short, long, float, double.
@@ -22,12 +22,12 @@ public class Main {
         double g = 4.589999999999999999999999999999999999999999999999;
 
         System.out.println("Задача 1");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
-        System.out.println(e);
-        System.out.println(g);
+        System.out.println("Значение переменной a c типом  int равно  " + a);
+        System.out.println("Значение переменной b c типом  byte равно  " + b);
+        System.out.println("Значение переменной c c типом  short равно  " + c);
+        System.out.println("Значение переменной d c типом  long равно  " + d);
+        System.out.println("Значение переменной e cтипом  float равно  " + e);
+        System.out.println("Значение переменной g c типом  double равно  " + g);
         System.out.println();
 
     }
@@ -112,7 +112,8 @@ public class Main {
          * */
         int whitePaintOneclass = 2;
         int brownPainOneClass = 4;
-        int clases = 120 / (whitePaintOneclass + brownPainOneClass);
+        int totalPaint = 120;
+        int clases = totalPaint / (whitePaintOneclass + brownPainOneClass);
         int whitePaint = clases * whitePaintOneclass;
         int brownPaint = clases * brownPainOneClass;
         System.out.println("В школе, где " + clases + "  классов, нужно " + whitePaint + " банок белой краски и " + brownPaint + " банок коричневой краски");
@@ -133,11 +134,16 @@ public class Main {
         Результат в граммах и килограммах напечатайте в консоль.
     * */
         int bananWeight = 80;
+        int totalBanan = 5;
         int milkWeight = 105;
+        int totalMilk = 2;
         int icecreamWeight = 100;
+        int totalIcecream = 2;
         int eggWight = 70;
-        int cocktailWeightGr = (5 * bananWeight) + (2 * milkWeight) + (2 * icecreamWeight) + (4 * eggWight);
-        float cocktailWeightKg = cocktailWeightGr / 1000;
+        int totalegg = 4;
+        int cocktailWeightGr = (totalBanan * bananWeight) + (totalMilk * milkWeight) + (totalIcecream * icecreamWeight)
+                + (totalegg * eggWight);
+        float cocktailWeightKg = cocktailWeightGr / 1000F;
         System.out.println("Общий вес завтрака в граммах равен " + cocktailWeightGr + " грамм");
         System.out.println("Общий вес завтрака в килограмах равен " + cocktailWeightKg + " килограмм");
         System.out.println();
@@ -156,9 +162,9 @@ public class Main {
         int massa = 7 * 1000;
         int minDrop = 250;
         int maxDrop = 500;
-        int maxDayDrop = massa / minDrop;
-        int mindayDrop = massa / maxDrop;
-        int avarageDayDrop = (mindayDrop + maxDayDrop) / 2;
+        float maxDayDrop = (float) massa / minDrop;
+        float mindayDrop = (float) massa / maxDrop;
+        float avarageDayDrop = (mindayDrop + maxDayDrop) / 2;
         System.out.println("Минимальное количество дней похудения " + mindayDrop);
         System.out.println("максимальное количество дней похудения " + maxDayDrop);
         System.out.println("Среднее количество дней похудения " + avarageDayDrop);
@@ -179,22 +185,23 @@ public class Main {
         int masha = 67_760;
         int denis = 83_690;
         int kris = 76_230;
-        float mashaIndex = masha * 1.1f;
-        float mashaProfit = (mashaIndex - masha) * 12;
-        float denisIndex = denis * 1.1f;
-        float denisProfit = (denisIndex - denis) * 12;
-        float krisIndex = kris * 1.1f;
-        float krisProfit = (krisIndex - kris) * 12;
+        float increase = 1.1f;
+        int months = 12;
+        float mashaIndex = masha * increase;
+        float mashaProfit = (mashaIndex - masha) * months;
+        float denisIndex = denis * increase;
+        float denisProfit = (denisIndex - denis) * months;
+        float krisIndex = kris * increase;
+        float krisProfit = (krisIndex - kris) * months;
         System.out.println(" Маша теперь получает " + mashaIndex + " рублей. Годовой доход вырос на " + mashaProfit + " рублей»");
         System.out.println(" Денис теперь получает " + denisIndex + " рублей. Годовой доход вырос на " + denisProfit + " рублей»");
         System.out.println(" Кристина теперь получает " + krisIndex + " рублей. Годовой доход вырос на " + krisProfit + " рублей»");
-        float companyProfit = (mashaProfit + denisProfit + krisProfit) * 12;
+        float companyProfit = (mashaProfit + denisProfit + krisProfit) * months;
         System.out.println("Разница между годовым доходом с нынешней зарплатой и после повышения составляет " + companyProfit);
         System.out.println();
 
 
     }
-
 
 
 }
